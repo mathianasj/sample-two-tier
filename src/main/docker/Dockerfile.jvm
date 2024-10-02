@@ -81,7 +81,7 @@ FROM registry.access.redhat.com/ubi8/openjdk-21:1.20 as builder
 
 COPY . .
 RUN ls
-RUN ./mvnw package
+RUN mvn package
 RUN ls -la
 
 FROM registry.access.redhat.com/ubi8/openjdk-21:1.20
